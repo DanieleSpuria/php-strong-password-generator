@@ -1,5 +1,4 @@
 <?php
-  
   function generatorPass($length) {
     $symbolsPass = 'abcdefghijklmnoprstuvwxyzABCDEFGHIJKLMNOPQRSTUVXYZ123456789!?&%$<>^+-*/()[]{}@#_=';
     $password = '';

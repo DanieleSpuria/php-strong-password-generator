@@ -1,10 +1,7 @@
 <?php 
-
-$length = $_GET['length'];
-
-if (!empty($length) && isset($length)) {
-    include __DIR__.'/functions.php';
-  }
+  $length = $_GET['length'];
+  
+  include __DIR__.'/functions.php';
 ?>
 
 
