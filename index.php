@@ -2,7 +2,18 @@
 
   $length = $_GET['length'];
 
-  var_dump($length)
+  function generatorPass($length) {
+    $symbolsPass = 'abcdefghijklmnoprstuvwxyzABCDEFGHIJKLMNOPQRSTUVXYZ123456789!?&%$<>^+-*/()[]{}@#_=';
+    $password = '';
+
+    for ($i = 0; $i < $length; $i++) {
+      $n = rand(0, strlen($symbolsPass) - 1);
+      $password .= $symbolsPass[$n];
+    }
+
+    return $password;
+  }
+
 
 ?>
 
@@ -21,6 +32,8 @@
     <input type="number" name="length" placeholder="Inserisci lunghezza password">
     <button type="submit">Invia</button>
   </form>
+
+  <h1>Password generata: <?php echo generatorPass($length) ?></h1>
 
 </body>
 </html>
