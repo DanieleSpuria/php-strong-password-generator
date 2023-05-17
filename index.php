@@ -2,10 +2,15 @@
 
   $length = $_GET['length'];
 
-  include __DIR__.'/functions.php';
 
-  session_start();
-  $_SESSION['password'] = generatorPass($length);
+  if (!empty($length) && isset($length)) {
+    include __DIR__.'/functions.php';
+
+    session_start();
+    $_SESSION['password'] = generatorPass($length);
+
+    header('Location: ./password.php');
+  }
 ?>
 
 
