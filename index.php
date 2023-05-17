@@ -1,35 +1,18 @@
-<?php
-
-  $length = $_GET['length'];
-
-
-  if (!empty($length) && isset($length)) {
-    include __DIR__.'/functions.php';
-
-    session_start();
-    $_SESSION['password'] = generatorPass($length);
-
-    header('Location: ./password.php');
-  }
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css' integrity='sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==' crossorigin='anonymous'/>
   <title>PHP Strong Password Generator</title>
 </head>
 <body>
 
-  <form action="./index.php" method="GET">
+  <form action="./password.php" method="GET">
     <input type="number" name="length" placeholder="Inserisci lunghezza password">
     <button type="submit">Invia</button>
   </form>
-
-  <!-- <h1>Password generata: <?php echo generatorPass($length) ?></h1> -->
 
 </body>
 </html>

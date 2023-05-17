@@ -1,9 +1,12 @@
 <?php 
 
-  session_start();
-  var_dump($_SESSION['password'])
+$length = $_GET['length'];
 
+if (!empty($length) && isset($length)) {
+    include __DIR__.'/functions.php';
+  }
 ?>
+
 
 
 <!DOCTYPE html>
@@ -15,6 +18,6 @@
   <title>Password</title>
 </head>
 <body>
-  <h1>Password generata: <?php echo $_SESSION['password'] ?></h1>
+  <h1>Password generata: <?php echo generatorPass($length) ?></h1>
 </body>
 </html>
