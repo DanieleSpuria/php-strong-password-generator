@@ -4,7 +4,8 @@
 
   include __DIR__.'/functions.php';
 
-
+  session_start();
+  $_SESSION['password'] = generatorPass($length);
 ?>
 
 
@@ -23,7 +24,7 @@
     <button type="submit">Invia</button>
   </form>
 
-  <h1>Password generata: <?php echo generatorPass($length) ?></h1>
+  <!-- <h1>Password generata: <?php echo generatorPass($length) ?></h1> -->
 
 </body>
 </html>
